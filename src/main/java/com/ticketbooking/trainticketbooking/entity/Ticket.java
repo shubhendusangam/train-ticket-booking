@@ -1,3 +1,7 @@
+/*
+ * create by : Shubhendu Sangam
+ * */
+
 package com.ticketbooking.trainticketbooking.entity;
 
 import jakarta.persistence.*;
