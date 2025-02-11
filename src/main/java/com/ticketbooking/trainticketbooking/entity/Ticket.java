@@ -1,9 +1,6 @@
 package com.ticketbooking.trainticketbooking.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class Ticket {
@@ -14,6 +11,9 @@ public class Ticket {
     private String toLocation;
     private Double price;
     private String section;
+
+    @OneToOne
+    private User user;
 
     public Long getId() {
         return id;
@@ -53,5 +53,13 @@ public class Ticket {
 
     public void setSection(String section) {
         this.section = section;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 }
