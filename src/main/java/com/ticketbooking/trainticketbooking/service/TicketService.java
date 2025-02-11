@@ -39,6 +39,15 @@ public class TicketService {
 
     /**
      *
+     * @param ticketId
+     * @return Ticket
+     */
+    public Ticket getTicketById(Long ticketId) {
+        return ticketRepository.getTicketById(ticketId);
+    }
+
+    /**
+     *
      * @param section
      * @return List<Ticket></>
      */
