@@ -7,6 +7,7 @@ package com.ticketbooking.trainticketbooking.entity;
 import jakarta.persistence.*;
 
 @Entity
+@Table(name = "ticket")
 public class Ticket {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -16,8 +17,19 @@ public class Ticket {
     private Double price;
     private String section;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     private User user;
+
+    public Ticket() {
+    }
+
+    public Ticket(String fromLocation, String toLocation, Double price, String section, User user) {
+        this.fromLocation = fromLocation;
+        this.toLocation = toLocation;
+        this.price = price;
+        this.section = section;
+        this.user = user;
+    }
 
     public Long getId() {
         return id;

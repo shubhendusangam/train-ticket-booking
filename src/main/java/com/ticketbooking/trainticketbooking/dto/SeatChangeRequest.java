@@ -4,6 +4,9 @@
 
 package com.ticketbooking.trainticketbooking.dto;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class SeatChangeRequest {
     private String newSection;
 

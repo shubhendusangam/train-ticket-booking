@@ -33,7 +33,7 @@ public class TicketService {
         ticket.setToLocation(to);
         ticket.setPrice(price);
         ticket.setSection(section);
-        ticket.setUser(userService.saveUser(user));
+        ticket.setUser(user);
         return ticketRepository.save(ticket);
     }
 

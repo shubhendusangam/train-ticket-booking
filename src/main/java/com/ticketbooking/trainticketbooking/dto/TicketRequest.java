@@ -4,6 +4,9 @@
 
 package com.ticketbooking.trainticketbooking.dto;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class TicketRequest {
     private String firstName;
     private String lastName;
